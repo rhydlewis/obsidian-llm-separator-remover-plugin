@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "llm-separator-remover",
+	"name": "LLM Separator Remover",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Remove LLM-generated separator patterns (blank line + --- + blank line) from notes",
+	"author": "Rhyd Lewis",
+	"authorUrl": "https://github.com/rhydlewis",
 	"isDesktopOnly": false
 }

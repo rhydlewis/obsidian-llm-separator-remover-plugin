@@ -1,16 +1,37 @@
-# Obsidian Sample Plugin
+# LLM Separator Remover
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+An Obsidian plugin that removes LLM-generated separator patterns from your notes.
 
-This project uses TypeScript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
+## What it does
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open modal (simple)" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+When you paste content from AI/LLM tools into Obsidian, they often include separator patterns like:
+
+```
+(blank line)
+---
+(blank line)
+```
+
+This plugin removes those separators with a single command, while preserving legitimate markdown horizontal rules (which don't have blank lines around them).
+
+## Usage
+
+1. Open a note with LLM-generated separators
+2. Run the command "Remove separators from current note" from the command palette (Ctrl/Cmd+P)
+3. The plugin will remove all instances and show how many were found
+
+You can also:
+- Assign a hotkey to the command in Obsidian's settings
+- Right-click in the editor to access the command from the context menu
+
+## Features
+
+- Simple one-command operation
+- Works on the entire current note
+- Shows count of separators removed
+- Preserves legitimate markdown horizontal rules
+- Changes are reversible with Undo (Ctrl/Cmd+Z)
+- Works on both desktop and mobile
 
 ## First time developing plugins?
 
